@@ -1,0 +1,22 @@
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# WebStorm
+.idea/
+
+# Nodejs module
+/node_modules/
+
+# Windows image file caches
+~$*
+*.Cache
+*.dbmdl
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Mac crap
+.DS_Store

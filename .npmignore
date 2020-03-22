@@ -1,0 +1,10 @@
+
+/test/
+/.github/
+
+.gitignore
+.npmignore
+
+/.idea/
+*.sublime-project
+*.sublime-workspace
