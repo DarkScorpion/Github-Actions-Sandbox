@@ -1,7 +1,10 @@
 
 name: Simple test on push
 
-on: push
+on: 
+  push:
+    branches-ignore:
+      - master
 
 jobs:
   test_simple:
