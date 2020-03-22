@@ -8,14 +8,14 @@ on:
 
 jobs:
   test_os:
+    name: OS test for ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macOS-latest ]
     steps:
       - uses: actions/checkout@v2
-      - name: OS test for ${{ matrix.os }}
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 10
       - run: |
@@ -23,14 +23,14 @@ jobs:
           npm test
 
   test_versions:
+    name: Versions test for ${{ matrix.node_version }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node_version: [ 4.x, 6.x, 8.x, 10.x, 12.x ]
     steps:
       - uses: actions/checkout@v2
-      - name: Versions test for ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node_version }}
       - run: |
@@ -38,11 +38,11 @@ jobs:
           npm test
 
   publish-npm:
+    name: Publish new version to NPM
     needs: [ test_os, test_versions ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Publish new version to NPM
         uses: actions/setup-node@v1
         with:
           node-version: 10
