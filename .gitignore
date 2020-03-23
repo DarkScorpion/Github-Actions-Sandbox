@@ -1,13 +1,13 @@
 
+# Nodejs module
+/node_modules/
+
 # Sublime Text
 *.sublime-project
 *.sublime-workspace
 
 # WebStorm
 .idea/
-
-# Nodejs module
-/node_modules/
 
 # Windows image file caches
 ~$*
@@ -19,4 +19,6 @@ Thumbs.db
 Desktop.ini
 
 # Mac crap
+.DS_STORE
 .DS_Store
+**/.DS_Store
