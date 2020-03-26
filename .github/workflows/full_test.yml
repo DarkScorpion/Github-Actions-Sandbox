@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - fullTest
-  push:
-    tags:
-      - fullTest
 
 jobs:
   test_all:
